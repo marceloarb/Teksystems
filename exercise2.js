@@ -41,10 +41,18 @@
 // PROBLEM 3:
 
 
+const multiple = (x)=>{
+    const fn = (y)=>{
+        return(x,y);
+    }
+    return fn(x);
+}
 
-
-
-
+let triple;
+triple = multiple(3);
+console.log(triple);
+triple = multiple(9);
+console.log(triple);
 
 
 
