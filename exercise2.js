@@ -42,20 +42,40 @@
 
 
 const multiple = (x)=>{
-    const fn = (y)=>{
+    return function fn(y){
         return(x,y);
-    }
-    return fn(x);
+    };
 }
 
-let triple;
-triple = multiple(3);
+let triple = multiple(3)(3);
 console.log(triple);
-triple = multiple(9);
+triple = multiple(3)(6);
 console.log(triple);
 
 
+// I am just playing with call back functions below here:
+const learning = (x)=>{
+    return function l(y){
+        return (y*x);
+    }
+    
+}
 
+
+let l = learning(3);
+console.log(l(3));
+
+
+
+function es5(x){
+    return function es(y){
+        return console.log((x*y));
+    }
+}
+
+
+var func = es5(3);
+func(6);
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
